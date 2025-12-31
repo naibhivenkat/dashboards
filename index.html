@@ -1,108 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Grocery App – Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 400px;
-      margin: 80px auto;
-      background: #fff;
-      padding: 24px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      color: #2e7d32;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #2e7d32;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #256428;
-    }
-    .hidden {
-      display: none;
-    }
-    .note {
-      font-size: 13px;
-      color: #666;
-      margin-top: 10px;
-      text-align: center;
-    }
-  </style>
+  <title>Grocery App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body style="font-family: Arial; max-width: 900px; margin: auto; padding: 20px;">
 
-<!-- LOGIN PAGE -->
-<div class="container" id="loginBox">
-  <h2>Grocery App Login</h2>
-  <input type="text" placeholder="Username" />
-  <input type="password" placeholder="Password" />
-  <button onclick="login()">Login</button>
-  <div class="note">
-    Demo login for Razorpay verification
-  </div>
-</div>
+  <h1>Grocery App</h1>
+  <p>
+    Grocery App is an online grocery ordering platform where customers
+    can order groceries from nearby shops using a mobile application.
+  </p>
 
-<!-- DASHBOARD -->
-<div class="container hidden" id="dashboardBox">
-  <h2>Customer Dashboard</h2>
-  <p>Welcome! You can place grocery orders and pay securely.</p>
-  <button onclick="pay()">Pay with Razorpay</button>
-  <div class="note">
-    Demo payment button (for review only)
-  </div>
-</div>
+  <h2>Key Features</h2>
+  <ul>
+    <li>User login & registration</li>
+    <li>Shop selection</li>
+    <li>Cart & order management</li>
+    <li>Online payments using Razorpay</li>
+    <li>Order tracking & delivery</li>
+  </ul>
 
-<script>
-  function login() {
-    document.getElementById("loginBox").classList.add("hidden");
-    document.getElementById("dashboardBox").classList.remove("hidden");
-  }
+  <h2>How It Works</h2>
+  <ol>
+    <li>User logs in</li>
+    <li>Selects a shop</li>
+    <li>Adds items to cart</li>
+    <li>Completes payment via Razorpay</li>
+  </ol>
 
-  function pay() {
-    var options = {
-      key: "rzp_test_1234567890", // DEMO KEY ONLY
-      amount: 10000, // ₹100
-      currency: "INR",
-      name: "Grocery App",
-      description: "Demo Grocery Order Payment",
-      handler: function (response) {
-        alert("Payment simulated for review.\nPayment ID: " + response.razorpay_payment_id);
-      },
-      theme: {
-        color: "#2e7d32"
-      }
-    };
-    var rzp = new Razorpay(options);
-    rzp.open();
-  }
-</script>
+  <h2>Try Demo Flow</h2>
+  <p>
+    <a href="login.html">👉 Go to Login Page</a>
+  </p>
+
+  <h2>Backend API</h2>
+  <p>
+    <a href="https://grocery-backend-956424262985.asia-south1.run.app" target="_blank">
+      https://grocery-backend-956424262985.asia-south1.run.app
+    </a>
+  </p>
+
+  <h2>Contact</h2>
+  <p>Email: support@groceryapp.com</p>
+  <p>Phone: +91XXXXXXXXXX</p>
 
 </body>
 </html>
